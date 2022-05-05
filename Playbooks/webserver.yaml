@@ -1,0 +1,19 @@
+- name: playbook to create webserver
+  hosts: all
+  become: true
+  tasks: 
+    - name: install package
+      yum:
+        state: latest
+        name: httpd
+
+    - name: start httpd package
+      services:
+         state: started
+         name: httpd
+         enabled: true
+
+    - name: deploy websites
+      copy:
+        src: ./index.html
+        dest: /var/www/html/index.html
