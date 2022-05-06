@@ -1,6 +1,7 @@
 - name: playbook for debug
   hosts: all
+    URL: "cloudblitz"
   tasks:
     - name: print hello world
       debug:
-        msg: "hello world welcome to cloudblitz"
+        msg: "hello world welcome to {{URL}}"
