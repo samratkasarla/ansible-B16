@@ -8,7 +8,7 @@
         name: httpd
 
     - name: start httpd package
-      services:
+      service:
          state: started
          name: httpd
          enabled: true
