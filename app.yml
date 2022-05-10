@@ -1,0 +1,5 @@
+- name: Roles Playbook
+  hosts: 172.31.19.96
+  become: true
+  roles:
+    - appserver
